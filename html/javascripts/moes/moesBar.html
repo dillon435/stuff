@@ -1,0 +1,84 @@
+<!doctype HTML>
+<html>
+<head>
+    <title>Moes Bar</title>
+    <script>
+        function serveDrink() {
+            //input - strip from the form
+
+            //var age = parseInt(document.getElementById("yearsOld").value);
+            var month = parseInt(document.getElementById("month").value);
+            var day = parseInt(document.getElementById("day").value);
+            var year = parseInt(document.getElementById("year").value);
+            
+            var age = 0;
+
+            //processing
+            
+            var today = new Date();
+            var born = new Date(year, month -1, day);
+            var millis = today - born;
+            //alert(millis);
+            
+            age = millis / (365 * 24 * 60 * 60 * 1000);
+
+            if (age >= 21) {
+                document.getElementById("drink").src = "images/duff.jpg";
+            } else if (age >= 10 && age < 21) {
+                document.getElementById("drink").src = "images/cola.jpg";
+            } else if (age >= 0 && age < 10) {
+                document.getElementById("drink").src = "images/malk.jpg";
+            } else {
+                document.getElementById("drink").src = "";
+                alert("Age must be between 0 and 100");
+            }
+
+            //output
+
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Moes Bar</h1>
+    <form name="getBirthDate" id="getBirthDate" action="#">
+        <!--<label for="age">How old are you?</label>
+        <input type="number" id="yearsOld" min=0 max=100><br>-->
+        <label for="month">Month</label>
+        <select id="month">
+            <script>
+                var month;
+                for(month = 1; month <= 12; month++){
+                    //loop will stop when month = 13
+                    //loop starts counting at 1, increase by 1
+                    //each step in the loop
+                    document.write("<option value=" + month + ">" + month + "</option>");
+                }
+            </script>
+        </select>
+        <label for="day">Day</label>
+        <select id="day">
+            <script>
+                var day;
+                for(day = 1; day <= 31; day++){
+                    document.write("<option value=" + day + ">" + day + "</option>");
+                }
+            </script>
+        </select>
+
+        <label for="year">Year</label>
+        <select id="year">
+            <script>
+                var year;
+                for(year = 2020; year >= 1900; year--){
+                    document.write("<option value=" + year + ">" + year + "</option>");
+                }
+            </script>
+        </select>
+
+    </form>
+    <button onclick="serveDrink();">Get a drink</button>
+    <img id="drink" height="200">
+</body></html>

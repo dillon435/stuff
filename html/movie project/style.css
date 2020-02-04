@@ -1,0 +1,25 @@
+body {
+    background-color: rgb(0, 0, 0);
+    color: rgb(58, 99, 255);
+}
+
+img{
+    float:left;
+    padding:1em;
+}
+
+.indexBox{
+    border: 2pt solid rgb(58, 99, 255);
+    padding: 2em;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    margin-bottom: 1em;
+    border-radius: 2em;
+}
+
+p{
+    margin-left:2em;
+}
+
+
+

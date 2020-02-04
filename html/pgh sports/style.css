@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond|Quicksand&display=swap');
+
+body {
+    background-color: #101820;
+    color: rgb(255, 255, 255);
+    font-family: 'Quicksand', sans-serif;
+}
+
+h1,
+h2 {
+    color: rgb(255, 182, 18);
+    font-family: 'EB Garamond', serif;
+}
+
+h2 {
+    /* border-bottom:2px solid rgb(255,182,18); */
+}
+
+/*this is the A tag within nav*/
+/*
+nav a {
+    color: rgb(255, 255, 255);
+    font-size: 1.5em;
+    padding: 1em;
+}
+
+nav a:hover {
+    color: rgb(255, 182, 18);
+}
+*/
+
+p {
+    margin-left: 2em;
+}
+
+/*generic class*/
+.arenaBox {
+    border: 2pt solid rgb(255, 182, 18);
+    padding: 2em;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    margin-bottom: 1em;
+    border-radius: 2em;
+}
+
+/*relative float positioning*/
+img {
+    float: left;
+    padding: 1em;
+}
+
+/*turn off the footer*/
+h2,
+footer {
+    clear: both;
+}
+
+br{
+    clear:both;
+}

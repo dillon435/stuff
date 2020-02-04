@@ -1,0 +1,35 @@
+<!doctype HTML>
+<html>
+<head>
+    <title>Roll Dice</title>
+    
+</head>
+<body>
+    <h1 onClick="rollTheDice();">Roll Dice</h1>
+    <img src="images/allDice.png" id="die1" width="150" height="150">
+    <img src="images/allDice.png" id="die2" width="150" height="150">
+    <p id="dieTotal"></p>
+    
+    <script>
+        function rollTheDice(){
+            var die1Val;
+            var die2Val;
+            var total;
+            
+            die1Val = Math.random() * 6 +1;
+            die1Val = Math.floor(die1Val);
+            // alert(die1Val);
+            die2Val = Math.random() * 6 +1;
+            die2Val = Math.floor(die2Val);
+            
+            total = die1Val + die2Val;
+            document.getElementById("dieTotal").innerHTML = total;
+            
+            document.getElementById("die1").src = "images/" + die1Val + ".png";
+            document.getElementById("die2").src = "images/" + die2Val + ".png";
+        }
+    
+    </script>
+    
+</body>
+</html>
